@@ -20,11 +20,21 @@
       crossorigin="anonymous"
     ></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+
     <script defer src="./script.js"></script>
   </head>
   <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
     <!-- header -->
-    <div class="head"><h1>Shopping List</h1></div>
+    <div class="head"><h1>SHOPPING LIST</h1></div>
 
     <!-- table -->
     <div class="container">
@@ -59,8 +69,10 @@
           </td>
         </tr>
       </table>
+      <div class="foo">
+        <button id="add" class="btn btn-light">add</button>
+        <button id="del" class="btn btn-light">clear</button>
+      </div>
     </div>
-
-    <div><button id="add" class="btn btn-light">add</button></div>
   </body>
 </html>

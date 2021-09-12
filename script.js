@@ -62,7 +62,7 @@ add.addEventListener("click", () => {
   };
 
   if (data.iName == null || data.iName == "") {
-    input[0].style.border = "thick solid red";
+    input[0].style.border = "solid #5f4b8bff ";
     return;
   } else {
     input[0].style.border = "none";
@@ -83,6 +83,14 @@ add.addEventListener("click", () => {
   body.innerHTML += row;
 
   console.log(data);
+});
+
+// ---------------------------------
+
+var clear = document.getElementById("del");
+
+clear.addEventListener("click", () => {
+  localStorage.clear();
 });
 
 // ---------------------------------
