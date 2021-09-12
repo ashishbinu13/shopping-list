@@ -10,11 +10,12 @@ function ajax() {
       for (var i = 0; i < list.length; i++) {
         var row = `<tr>
         <th scope="row">${list[i].sNo}</th>
-        <td>${list[i].iName}</td>
+        <td class="item">${list[i].iName}</td>
         <td>${list[i].qty}</td>
         <td>${list[i].unit}</td>
         <td>${list[i].dept}</td>
         <td>${list[i].note}</td>
+        <td><input class="check" type="checkbox"></td>
         </tr>`;
 
         body.innerHTML += row;
@@ -26,11 +27,12 @@ function ajax() {
         var data = JSON.parse(localStorage.getItem(sno));
         var row = `<tr>
         <th scope="row">${index}</th>
-        <td>${data.iName}</td>
+        <td class="item">${data.iName}</td>
         <td>${data.qty}</td>
         <td>${data.unit}</td>
         <td>${data.dept}</td>
         <td>${data.note}</td>
+        <td><input class="check" type="checkbox"></td>
         </tr>`;
         body.innerHTML += row;
         index++;
@@ -38,7 +40,6 @@ function ajax() {
     }
   };
 
-  console.log(list);
   xhttp.open("GET", "./list.json", true);
   xhttp.send();
 }
@@ -54,18 +55,18 @@ add.addEventListener("click", () => {
   var index = length + 1;
 
   var data = {
-    iName: input[0].value,
-    qty: input[1].value,
-    unit: input[2].value,
-    dept: input[3].value,
-    note: input[4].value,
+    iName: input[length].value,
+    qty: input[length + 1].value,
+    unit: input[length + 2].value,
+    dept: input[length + 3].value,
+    note: input[length + 4].value,
   };
 
   if (data.iName == null || data.iName == "") {
-    input[0].style.border = "solid #5f4b8bff ";
+    input[length].style.border = "solid red ";
     return;
   } else {
-    input[0].style.border = "none";
+    input[length].style.border = "none";
   }
 
   localStorage.setItem(index, JSON.stringify(data));
@@ -74,11 +75,12 @@ add.addEventListener("click", () => {
 
   var row = `<tr>
         <th scope="row">${index}</th>
-        <td>${data.iName}</td>
+        <td class="item">${data.iName}</td>
         <td>${data.qty}</td>
         <td>${data.unit}</td>
         <td>${data.dept}</td>
         <td>${data.note}</td>
+        <td><input class="check" type="checkbox"></td>
         </tr>`;
   body.innerHTML += row;
 
@@ -91,8 +93,32 @@ var clear = document.getElementById("del");
 
 clear.addEventListener("click", () => {
   localStorage.clear();
+  location.reload();
 });
 
 // ---------------------------------
 
+function strike() {
+  let length = 10 + localStorage.length;
+  var item = Array.from(document.querySelectorAll(".item"));
+  var check = Array.from(document.querySelectorAll(".check"));
+  for (var i = 0; i < length; i++) {
+    if (check[i].checked) {
+      item[i].innerHTML = `<s>${item[i].textContent}</s>`;
+    } else {
+      item[i].innerHTML = `${item[i].textContent}`;
+    }
+  }
+}
+// ---------------------------------
+
 window.addEventListener("load", ajax);
+
+// window.addEventListener("load", (e) => {
+//   [...document.querySelectorAll(".check")].forEach((element) => {
+//     console.log(element);
+//     element.addEventListener("click", strike);
+//   });
+// });
+
+document.querySelector("table").addEventListener("click", strike);

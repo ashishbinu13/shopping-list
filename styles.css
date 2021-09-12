@@ -7,7 +7,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Roboto Condensed", sans-serif !important;
+  font-family: "Source Sans Pro", sans-serif !important;
   font-size: larger !important;
   /* background-color: #5f4b8bff !important; */
   text-align: center !important;
@@ -15,6 +15,10 @@ body {
 
 input {
   width: 70px;
+  background-color: rgb(211, 231, 240);
+}
+thead {
+  background-color: #0063b2ff;
 }
 
 .foo {
@@ -24,19 +28,19 @@ input {
 }
 
 #add {
-  background-color: #97bc62ff;
+  background-color: #9cc3d5ff;
   position: relative;
   margin-right: 40px;
 }
 
 #del {
-  background-color: #97bc62ff;
+  background-color: #9cc3d5ff;
   position: relative;
 }
 
 #add:hover,
 #del:hover {
-  background-color: #2c5f2d;
+  background-color: #0063b2ff;
   color: #97bc62ff;
 }
 
@@ -46,8 +50,7 @@ input {
 }
 
 #table {
-  background-color: #2c5f2d;
-  color: #97bc62ff !important;
+  color: #101820ff !important;
   border-radius: 0.25em;
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
@@ -60,7 +63,7 @@ input {
 }
 
 h1 {
-  color: #2c5f2d;
+  color: #0063b2ff;
 }
 
 .container {
