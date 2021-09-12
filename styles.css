@@ -6,3 +6,8 @@ input {
   position: relative;
   left: 15%;
 }
+
+.head {
+  text-align: center;
+  margin: 50px auto;
+}
