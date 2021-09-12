@@ -1,0 +1,91 @@
+[
+  {
+    "sNo": 1,
+    "iName": "Rice",
+    "qty": 10,
+    "unit": "kg",
+    "dept": "grocery",
+    "note": "Basmati rice"
+  },
+
+  {
+    "sNo": 2,
+    "iName": "Milk",
+    "qty": 500,
+    "unit": "mL",
+    "dept": "grocery",
+    "note": "buy Amul brand"
+  },
+
+  {
+    "sNo": 3,
+    "iName": "Tissue Paper",
+    "qty": 5,
+    "unit": "pack",
+    "dept": "grocery",
+    "note": "oil absorbant"
+  },
+
+  {
+    "sNo": 4,
+    "iName": "pen",
+    "qty": 10,
+    "unit": "nos",
+    "dept": "stationary",
+    "note": "black ink"
+  },
+
+  {
+    "sNo": 5,
+    "iName": "banana",
+    "qty": 2,
+    "unit": "kg",
+    "dept": "fruits",
+    "note": "buy fresh"
+  },
+
+  {
+    "sNo": 6,
+    "iName": "chips",
+    "qty": 5,
+    "unit": "packet",
+    "dept": "snacks",
+    "note": "lays(green)"
+  },
+
+  {
+    "sNo": 7,
+    "iName": "fish",
+    "qty": 1,
+    "unit": "kg",
+    "dept": "food",
+    "note": "fresh"
+  },
+
+  {
+    "sNo": 8,
+    "iName": "oil",
+    "qty": 1,
+    "unit": "L",
+    "dept": "edible oil",
+    "note": "sunflower oil"
+  },
+
+  {
+    "sNo": 9,
+    "iName": "eggs",
+    "qty": 10,
+    "unit": "nos",
+    "dept": "eggs",
+    "note": "chicken egg"
+  },
+
+  {
+    "sNo": 10,
+    "iName": "wine",
+    "qty": 2,
+    "unit": "L",
+    "dept": "beverages",
+    "note": "red wine"
+  }
+]
